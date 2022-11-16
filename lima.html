@@ -1,1 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <title>Anavi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "icon" type= "image.png" href= "images/chart.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+    <link rel="stylesheet" href="https://use.typekit.net/auy7uxg.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172405324-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-172405324-1');
+    </script>
+    
+    
+    <style>
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+
+        h4 {
+
+            font-size: 12px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #676767;
+        }
+
+        .huge {
+            font-size: 55px;
+            color: black;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        .row {
+            text-align: left;
+        }
+
+        .imagesize {
+            width: 100%;
+            height: auto;
+            border-radius:8px;
+        }
+
+        .gifsize {
+            width: 20%;
+            height: auto;
+        }
+
+        .gifsize1 {
+            width: 50%;
+            height: 50%;
+        }
+
+        .content {
+            width: 45%;
+            margin: 0 auto;
+            margin-top: 10em;
+            margin-bottom: 10em;
+        }
+
+        .quote {
+            font-size: 16px;
+            margin: 3em;
+            font-weight: 400;
+            border-left: 2px solid black;
+            padding-left: 30px;
+            font-style: italic;
+        }
+
+        .lgspacer {
+            padding-top: 5em;
+
+        }
+
+        .smspacer {
+            padding-top: 2em;
+
+        }
+
+        .important {
+            background-color: #F7F7F7;
+            padding: 30px;
+            border-radius: 18px;
+        }
+
+
+
+        .importantclick {
+            background-color: #F7F7F7;
+            padding: 30px;
+            text-align: center;
+            transition: background-color .5s;
+
+        }
+
+        .importantclick:hover {
+            background-color: #DDDDDD;
+            cursor: pointer;
+        }
+
+
+        .links {
+            color: #0278C0;
+        }
+
+        p i {
+            padding-right: 10px;
+            color: #4d4d4d;
+        }
+
+
+        .darklink {
+            color: #4d4d4d;
+        }
+
+
+        .figcap {
+            padding-top: 10px;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: center;
+            color: dimgrey;
+        }
+
+        .topnav {
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding-left: 2em;
+            padding-top: 1em;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+
+        ul li {
+            line-height: 35px;
+        }
+
+
+        .toppadding {
+            padding-top: 8em;
+        }
+
+
+
+
+        /*-------- NEXT BUTTOM --------*/
+
+        a {
+            text-decoration: none!important;
+            color: black;
+        }
+
+
+
+        a:hover {
+            text-decoration: none!important;
+            color: black;
+        }
+
+
+
+
+        /*-------- FOOTER ICON BAR --------*/
+
+        .icon {
+            font-size: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+
+
+        .iconbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+        }
+
+        .iconbar i {
+            color: black;
+            transition: color .5s;
+        }
+
+        .iconbar i:hover {
+            color: darkgrey;
+        }
+
+
+        .container {
+            text-align: center!important;
+        }
+
+
+
+
+        @media screen and (min-width: 300px) {
+            .content {
+                width: 90%;
+                margin: 0 auto;
+                margin-top: 5em;
+                margin-bottom: 10em;
+            }
+
+            .imagesize {
+                width: 100%;
+                height: auto;
+                border-radius:8px;
+            }
+
+
+        }
+
+        @media screen and (min-width: 600px) {
+            .content {
+                width: 60%;
+                margin: 0 auto;
+                margin-top: 5em;
+                margin-bottom: 10em;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            .content {
+                width: 45%;
+                margin: 0 auto;
+                margin-top: 5em;
+                margin-bottom: 10em;
+            }
+        }
+        
+        #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 16px;
+  border: solid black 1px;
+  outline: none;
+  background-color: White;
+  color: solid black;
+  cursor: pointer;
+  padding: 3px 10px  3px 10px;
+  border-radius: 40px;
+}
+
+#myBtn:hover {
+  background-color: black;
+  color: white;
+    </style>
+</head>
+    
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <span class="col-md-9">
+
+                <div class="smspacer"></div>
+
+                <a href="index.html">
+                    <p class="darklink"> <i class="fa fa-arrow-left darklink" aria-hidden="true"></i> <span>Back to Projects</span></p>
+            </a>
+
+            <div class="smspacer"></div>
+            <h1 class="huge">Gender Misrepresentation</h1>
+            <div class="smspacer"></div>
+            </span>
+
+
+        </div>
+    </div>
+
+    
+       
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->    
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <span class="col-md-9">    
+                    <img align="middle" src="images/poison.gif" class="gifsize"></a> 
+
+            <div class="smspacer"></div>
+            <div class="important">
+                <h4>DATA:</h4>
+                <ul>
+                    <li><strong>Mark: </strong>User research, Product thinking</li>
+                    <li><strong>Tools: </strong>Adobe XD, Adobe Illustrator, Adobe Indesign</li>
+                    <li><strong>Timeline: </strong>Jan- April 2019 (16 weeks)</li>
+                    <li><strong>Deliverables: </strong>Research findings, presentation, document</li>
+                 
+                </ul>
+
+            </div>
+            <div class="lgspacer"></div>
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+                 <!--h1>The Problem </h1>
+                
+                 <p>Demonetization was harsher on the visually impaired- the new currency offers them no clue as to what value they are handing out. The sizes of the notes are similar, and to distinguish amongst them is haptically difficult.</p>
+    
+                 <div class="lgspacer"></div>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+                <h1>Forming a Hypothesis </h1>
+                <p>Gap analysis of the Indian fintech industry led me to the communities which suffer from increased payment friction.
+                <br><br>
+                <!--Before diving into any problem, I believe it’s important to state a problem hypothesis and then test it. Testing a problem hypothesis allows me to develop a deep understanding of the problem, discover implications, and check how it has been solved. In this case, I realized that many people never questioned the financial problems of the visually impaired, and I felt it was important to find the answer.</p>
+                
+                <div class="smspacer"></div>
+                <div class="important">
+                <h2>My Hypothesis</h2>  
+                    <p>People with severe visual impairments are unable to use Paytm properly due to the lack of accessible design and development.</p>
+                </div-->
+                                
+                I went through multiple revisions of different "How Might We" questions to help me have a clear understanding of the problem I was solving.
+                
+            </p>
+                <div class="smspacer"></div>
+                <div class="important">
+                <h4>HMW Question:</h4>
+                
+                <h2>How might we reduce the financial dependence of the visually impaired?</h2>
+                </div>
+                
+                
+            <div class="lgspacer"></div>
+                
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                 
+            <div class="lgspacer"></div>
+
+                <h1>Data Set</h1>
+            <div class="smspacer"></div>
+            
+            <iframe width="100%" height="727" frameborder="0"
+  src="https://observablehq.com/embed/@onobi/female-superheroes?cells=table%2Ctable2%2Ctable3"></iframe>
+               
+ <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->         
+                <div class="smspacer"></div>
+                <h4>User Quotes:</h4>
+
+                <div class="quote">“I asked my friend to teach me how to use a credit card because I can't use cash.”</div>
+                <div class="quote">“I used Paytm when I was partially blind, but it worsens with every update.”</div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+               
+        
+            <div class="lgspacer"></div>                
+                <div class="important">
+                <h2>Key Insights</h2>
+                <ul>
+                    <li>Visually Impaired customers prefer PhonePe and GooglePay to Paytm.</li>
+                    <li>The app interface changes often.</li>
+                    <li>KYC is a hurdle in smooth onboarding. The visually impaired still using Paytm have been using it due to the ease of agent visit available earlier.</li>
+                    <li>A one-click-to-reach system is not suitable for easy 1-D navigation. Categorization is preferred.</li>
+                    <li>Typing PIN is risky. There are different methods visually impaired use to ensure safety.</li>
+                    <li>Users find it hard to customize layout, content and structure.</li>
+                </ul>
+            </div>
+            
+                <div class="lgspacer"></div>
+ 
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->               
+               
+            <div class="lgspacer"></div>
+                
+                <h1>The Opportunity </h1>
+                <div class="smspacer"></div>
+                 
+                <p>PWD have difficulty using a brick-and-mortar bank or credit union because of travel barriers or time restrictions.</p>
+<br>
+                <p><strong>Digital technology has the potential to be a great equalizer.</strong> Mobile financial services are a convenient option, anytime and anyplace. If not accessible, technology only further excludes people with disabilities from engaging with a brand.</p>
+<br>
+    <p>Customers with disabilities provide a large, valuable market currently underserved by the financial services industry. <strong>The visually Impaired population is the fastest-growing minority in India.</strong> Banks and credit unions cannot afford to ignore the opportunity to create relations with this untapped market. Limited financial knowledge has resulted in an unstable relationship between people with disabilities and financial institutions.</p>
+                <div class="lgspacer"></div>
+                
+ <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->           
+                
+                <h2>Design Goals</h2>
+                <div class="smspacer"></div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Build Trust</h4>
+                        <p>Help customers feel confident paying and receiving money without relying on others.</p>
+                    </div>
+                <div class="smspacer"></div>
+                    <div class="col-md-6">
+                        <h4>Ease of Use</h4>
+                        <p>The solution should be seamless and easy to use.</p>
+                    </div>
+                </div>
+                
+                <div class="lgspacer"></div>
+                
+  <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->               
+               <div class="lgspacer"></div>
+                <h1>Persona Spectrums</h1>
+                
+                <div class="smspacer"></div>
+                <p><strong>When we solve for accessibility, we all benefit. Solving for visual impairments can help many.</strong></p>
+                
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                
+           <div class="lgspacer"></div>               
+
+            <h1>Exploring Ideas</h1>
+            <p>After understanding the users & problem deeper, I wrote down as many ideas as possible to help me think of different ways to solve this problem. 
+                
+ <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->               
+            <div class="lgspacer"></div>
+           <h1>Accessibility Testing</h1>
+
+                <div class="smspacer"></div>
+                <div class="important">
+                <h4>RESEARCH METHOD 1</h4>
+                <h2>Manual Accessibility Tests</h2>
+                <p>By interacting with your Paytm consumer app using accessibility services, I could experience the app like the visually impaired users. TalkBack/ VoiceOver are built-in screen readers. When turned on, users can interact with their device without seeing the screen.</p>
+                </div>
+                
+                <div class="smspacer"></div>
+                <div class="important">
+                <h4>TESTING METHOD 2</h4>
+                <h2>Scanning Accessibility Tests</h2>
+                <p>Testing with analysis tools can uncover opportunities to improve accessibility that you might miss with manual testing.</p>
+                </div>
+                <div class="smspacer"></div>
+            
+                <div class="smspacer"></div>
+                <div class="important">
+                <h4>TESTING METHOD 3</h4>
+                <h2>User Testing</h2>
+                <p>I stepped out of the building! Nothing beats testing with real users on the field and getting feedback on our app. NIVH, BRA and NAB are some organizations where you can find people with visual impairments at work.</p>
+        </div>
+
+            <div class="lgspacer"></div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+  <div class="lgspacer"></div>    
+        <h1>Accessibility Rulebook</h1>
+        <p>Implementing accessibility long after building a complex product is an intricate process and requires a well-structured plan. I created guidelines and shared them with the team to ensure a smooth transition into an accessible platform.. The guidelines comprise a set of design and development audit checklists for quality assurance.</p>
+        <div class="smspacer"></div>
+        
+      
+        
+        <div class="lgspacer"></div>
+        
+        
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="lgspacer"></div>
+        <div class="important">
+            <h2>Next Steps & Considerations:</h2>
+            <ul>
+                <li>Develop hidden labels in iOS and Website.</li>
+                <li>Find ways to incorporate haptic feedback into the system.</li>
+                <li>Study of existence mental blocks and trust issues associated with digital payments.</li>
+
+
+            </ul>
+
+        </div>
+        <div class="lgspacer"></div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+       
+        
+        <div class="lgspacer"></div>
+        <h1>My Successes </h1>
+
+        <p>While writing up the case study, I discussed my work with an accessibility advocate. I received the reply below:</p>
+
+        <div class="smspacer"></div>
+        <p class="quote">
+                    “I will always be grateful for the fact that Anavi as an intern understood the need to make Paytm accessible, which I have been trying to convince the most educated minds of this country about for last many years. The fact that a student understood it proves that all you require is a mindset to understand and commit to improving.”
+                    <br><br>
+                    -<strong> Amar Jain,</strong></a> Accessibility Advocate
+        </p>
+
+        <div class="smspacer"></div>
+        <div class="important">
+            <h4>Awards Won</h4>
+            <p>The project won accolades for the Best and the Most Innovative Graduation Project at NIFT Delhi Graduation Exhibit 2019.</p>
+            
+        </div>
+    
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+</script>
+
+     
+
+
+
+
+<footer>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="container">
+        <div class="iconbar">
+
+            <ul>
+                <!--a href="https://medium.com/@anavi.mittal" target="_blank"><i class="fab fa-medium icon"></i></a-->
+                <a href="https://www.behance.net/anavimittal" target="_blank"><i class="fab fa-behance icon"></i></a>
+                <a href="https://www.linkedin.com/in/anavimittal" target="_blank"><i class="fab fa-linkedin-in icon"></i></a>
+                <!--a href="https://dribbble.com/anavi" target="_blank"><i class="fab fa-dribbble icon"></i></a-->
+                <a href="mailto:anavi.mtl@gmail.com" target="_top"><i class="fas fa-envelope icon"></i></a>
+            </ul>
+
+
+            <div class="smspacer"></div>
+
+
+        </div>
+        <p class="figcap">&#169; 2022. Created with &#10084;&#65039 by Anavi</p>
+
+    </div>
+
+
+
+
+</footer>
+
+</html>
